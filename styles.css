@@ -17,7 +17,6 @@ body {
 /* Opções no topo com retângulos menores alinhados horizontalmente */
 .top-options {
     display: flex;
-    flex-wrap: wrap; /* Permite que as opções quebrem para a linha seguinte em telas pequenas */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -25,7 +24,7 @@ body {
     padding: 10px 0;
     position: fixed;
     top: 0;
-    width: 100%; /* Ajusta para ocupar a largura total */
+    width: calc(100% - 50px); /* Ajusta para permitir espaço para a lupa */
     z-index: 2;
 }
 
@@ -70,6 +69,41 @@ body {
 
 .search-icon-top i {
     font-size: 1.5rem; /* Tamanho da lupa */
+}
+
+/* Ajustes para ícones superiores */
+.top-options a,
+.search-icon-top a {
+    font-size: 1rem; /* Tamanho padrão dos ícones */
+}
+
+.search-icon-top i {
+    font-size: 1.5rem; /* Tamanho padrão do ícone da lupa */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajuste do tamanho dos ícones no topo */
+    .top-options a,
+    .search-icon-top a {
+        font-size: 0.9rem; /* Reduz o tamanho dos ícones em telas menores */
+    }
+    
+    .search-icon-top i {
+        font-size: 1.3rem; /* Reduz o tamanho do ícone da lupa em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste adicional para ícones em telas muito pequenas */
+    .top-options a,
+    .search-icon-top a {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones */
+    }
+    
+    .search-icon-top i {
+        font-size: 1.1rem; /* Reduz ainda mais o tamanho do ícone da lupa */
+    }
 }
 
 /* Ajuste das outras seções para se adaptarem à barra lateral de opções */
@@ -161,79 +195,4 @@ body {
     border: 2px solid white;
     padding: 5px;
     border-radius: 50%;
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    .top-options {
-        padding: 5px 0;
-    }
-    
-    .option-rectangle {
-        font-size: 0.6rem;
-        padding: 4px 8px;
-    }
-    
-    .search-icon-top {
-        width: 40px; /* Ajusta a largura da lupa */
-    }
-
-    .search-icon-top i {
-        font-size: 1.2rem; /* Ajusta o tamanho do ícone da lupa */
-    }
-
-    .navbar-item {
-        margin: 0 5px;
-    }
-
-    .navbar-item a {
-        font-size: 1.2rem;
-        padding: 5px 10px;
-    }
-
-    .navbar-item .icon-name {
-        font-size: 0.7rem;
-    }
-
-    .container {
-        padding-top: 50px; /* Ajusta o espaçamento para a barra superior em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .top-options {
-        flex-direction: column; /* Alinha as opções verticalmente */
-    }
-
-    .option-rectangle {
-        width: 100%; /* Largura total para cada retângulo */
-        font-size: 0.5rem;
-        padding: 3px 5px;
-    }
-
-    .search-icon-top {
-        width: 35px; /* Ajusta a largura da lupa */
-    }
-
-    .search-icon-top i {
-        font-size: 1rem; /* Ajusta o tamanho do ícone da lupa */
-    }
-
-    .navbar-item {
-        margin: 0;
-        flex: 1;
-    }
-
-    .navbar-item a {
-        font-size: 1rem;
-        padding: 5px;
-    }
-
-    .navbar-item .icon-name {
-        font-size: 0.6rem;
-    }
-
-    .container {
-        padding-top: 40px; /* Ajusta o espaçamento para a barra superior em telas menores */
-    }
 }
