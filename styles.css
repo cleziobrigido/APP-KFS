@@ -47,7 +47,7 @@ body {
 }
 
 .option-rectangle:hover, .option-rectangle:active {
-    background-color: orange; /* Fundo laranja */
+    background-color: #DE570E; /* Cor laranja atualizada */
 }
 
 .option-rectangle:hover a, .option-rectangle:active a {
