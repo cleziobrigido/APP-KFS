@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Configurações básicas do corpo */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #000;
@@ -44,8 +46,12 @@ body {
     text-decoration: none;
 }
 
-.option-rectangle a:hover {
-    color: #FF53BC;
+.option-rectangle:hover, .option-rectangle:active {
+    background-color: orange; /* Fundo laranja */
+}
+
+.option-rectangle:hover a, .option-rectangle:active a {
+    color: white; /* Letras brancas ao passar o mouse */
 }
 
 /* Ícone de pesquisa no topo */
@@ -69,41 +75,6 @@ body {
 
 .search-icon-top i {
     font-size: 1.5rem; /* Tamanho da lupa */
-}
-
-/* Ajustes para ícones superiores */
-.top-options a,
-.search-icon-top a {
-    font-size: 1rem; /* Tamanho padrão dos ícones */
-}
-
-.search-icon-top i {
-    font-size: 1.5rem; /* Tamanho padrão do ícone da lupa */
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    /* Ajuste do tamanho dos ícones no topo */
-    .top-options a,
-    .search-icon-top a {
-        font-size: 0.9rem; /* Reduz o tamanho dos ícones em telas menores */
-    }
-    
-    .search-icon-top i {
-        font-size: 1.3rem; /* Reduz o tamanho do ícone da lupa em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajuste adicional para ícones em telas muito pequenas */
-    .top-options a,
-    .search-icon-top a {
-        font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones */
-    }
-    
-    .search-icon-top i {
-        font-size: 1.1rem; /* Reduz ainda mais o tamanho do ícone da lupa */
-    }
 }
 
 /* Ajuste das outras seções para se adaptarem à barra lateral de opções */
@@ -137,7 +108,7 @@ body {
     align-items: center;
 }
 
-.bloco:hover {
+.bloco:hover, .bloco:active {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
@@ -174,7 +145,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-item a:hover {
+.navbar-item a:hover, .navbar-item a:active {
     background-color: #e0489b;
     transform: scale(1.1);
 }
