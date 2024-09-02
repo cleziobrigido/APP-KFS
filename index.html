@@ -7,6 +7,17 @@
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adicionando a mudança de cor ao passar o mouse sobre o link */
+        .top-options .option-rectangle a {
+            color: inherit; /* Mantém a cor inicial */
+            text-decoration: none; /* Remove sublinhado */
+        }
+
+        .top-options .option-rectangle a:hover {
+            color: orange; /* Cor laranja ao passar o mouse */
+        }
+    </style>
 </head>
 <body>
     <div class="top-options">
@@ -41,8 +52,8 @@
         <div class="navbar-item"><a href="#"><span class="icon-f">F</span><span class="icon-name">Fonte</span></a></div>
         <div class="navbar-item"><a href="#"><i class="fas fa-heart icon-heart-circle"></i><span class="icon-name">Comunidade</span></a></div>
         <div class="navbar-item"><a href="#"><i class="fas fa-heart"></i><span class="icon-name">Favoritos</span></a></div>
-        <div class="navbar-item"><a href="#"><i class="fas fa-gift"></i><span class="icon-name">Bônus</span></a></div>
         <div class="navbar-item"><a href="#"><i class="fas fa-user"></i><span class="icon-name">Suporte</span></a></div>
+        <div class="navbar-item"><a href="#"><i class="fas fa-gift"></i><span class="icon-name">Bônus</span></a></div>
     </div>
 </body>
 </html>
