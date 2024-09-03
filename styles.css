@@ -95,14 +95,14 @@ body {
     text-align: center;
     padding: 20px 10px;
     width: 90%;
-    max-width: 800px;
-    border-radius: 20px;
-    border: 4px solid #FF53BC;
+    max-width: 390px;
+    border-radius: 30px;
+    border: 2px solid #FF53BC;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     font-size: 1.6rem;
     transition: all 0.3s ease;
     position: relative;
-    height: 150px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
