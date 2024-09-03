@@ -21,12 +21,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Reduzido para ajustar o espaço entre as opções */
+    gap: 3px; /* Reduzido para ajustar o espaço entre as opções */
     background-color: transparent; /* Fundo transparente */
     padding: 5px 0; /* Reduzido para diminuir o espaço interno */
     position: fixed;
     top: 0;
-    width: calc(100% - 50px); /* Ajusta para permitir espaço para a lupa */
+    width: 90%; /* Ajusta para alinhar com a largura dos blocos */
+    max-width: 390px; /* Alinha com a largura máxima dos blocos */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
 }
 
@@ -34,9 +37,9 @@ body {
     background-color: transparent; /* Remover fundo preto */
     border: 2px solid #808080; /* Borda cinza */
     color: #808080; /* Letras cinzas */
-    padding: 3px 6px; /* Reduzido para diminuir o tamanho */
-    border-radius: 6px; /* Bordas mais arredondadas */
-    font-size: 0.6rem; /* Tamanho menor do texto */
+    padding: 2px 5px; /* Reduzido para diminuir o tamanho */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    font-size: 0.5rem; /* Tamanho menor do texto */
     text-align: center;
 }
 
@@ -56,15 +59,17 @@ body {
 /* Ícone de pesquisa no topo */
 .top-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Centralizar a lupa */
     align-items: center;
     background-color: transparent; /* Fundo transparente */
     padding: 5px; /* Reduzido para diminuir o padding da lupa */
     position: fixed;
     top: 0;
     right: 0;
-    width: 40px; /* Largura reduzida para a lupa */
+    width: 30px; /* Largura reduzida para a lupa */
+    height: 30px; /* Altura reduzida para a lupa */
     z-index: 3; /* Acima das opções no topo */
+    border-radius: 50%; /* Bordas arredondadas */
 }
 
 .search-icon-top a {
@@ -73,7 +78,7 @@ body {
 }
 
 .search-icon-top i {
-    font-size: 1.2rem; /* Tamanho reduzido da lupa */
+    font-size: 1rem; /* Tamanho reduzido da lupa */
 }
 
 /* Ajuste das outras seções para se adaptarem à barra lateral de opções */
