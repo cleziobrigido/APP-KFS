@@ -21,9 +21,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background-color: black;
-    padding: 10px 0;
+    gap: 5px; /* Reduzido para ajustar o espaço entre as opções */
+    background-color: transparent; /* Fundo transparente */
+    padding: 5px 0; /* Reduzido para diminuir o espaço interno */
     position: fixed;
     top: 0;
     width: calc(100% - 50px); /* Ajusta para permitir espaço para a lupa */
@@ -31,14 +31,13 @@ body {
 }
 
 .option-rectangle {
-    background-color: black;
+    background-color: transparent; /* Remover fundo preto */
     border: 2px solid #808080; /* Borda cinza */
     color: #808080; /* Letras cinzas */
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.7rem;
+    padding: 3px 6px; /* Reduzido para diminuir o tamanho */
+    border-radius: 6px; /* Bordas mais arredondadas */
+    font-size: 0.6rem; /* Tamanho menor do texto */
     text-align: center;
-    line-height: 1.2;
 }
 
 .option-rectangle a {
@@ -59,12 +58,12 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: black; /* Fundo preto para combinar com o restante */
-    padding: 10px;
+    background-color: transparent; /* Fundo transparente */
+    padding: 5px; /* Reduzido para diminuir o padding da lupa */
     position: fixed;
     top: 0;
     right: 0;
-    width: 50px; /* Largura suficiente para a lupa */
+    width: 40px; /* Largura reduzida para a lupa */
     z-index: 3; /* Acima das opções no topo */
 }
 
@@ -74,7 +73,7 @@ body {
 }
 
 .search-icon-top i {
-    font-size: 1.5rem; /* Tamanho da lupa */
+    font-size: 1.2rem; /* Tamanho reduzido da lupa */
 }
 
 /* Ajuste das outras seções para se adaptarem à barra lateral de opções */
@@ -85,7 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 60px; /* Ajusta o espaçamento para evitar sobreposição da barra superior */
+    padding-top: 50px; /* Ajusta o espaçamento para evitar sobreposição da barra superior */
 }
 
 /* Blocos */
@@ -142,7 +141,7 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 1rem; /* Tamanho ainda menor dos ícones */
+    font-size: 1rem; /* Tamanho menor dos ícones */
     padding: 5px; /* Reduzindo o padding */
     border-radius: 8px; /* Bordas mais arredondadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
