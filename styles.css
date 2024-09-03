@@ -123,8 +123,11 @@ body {
     border-top: 1px solid #FF53BC;
     box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 100%;
+    width: 90%;  /* Ajuste de largura para alinhar com os blocos */
+    max-width: 390px;  /* Mesma largura máxima dos blocos */
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
@@ -132,16 +135,16 @@ body {
 .navbar-item {
     flex: 1;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 5px; /* Margem reduzida */
 }
 
 .navbar-item a {
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 10px 15px;
-    border-radius: 10px;
+    font-size: 1rem; /* Tamanho ainda menor dos ícones */
+    padding: 5px; /* Reduzindo o padding */
+    border-radius: 8px; /* Bordas mais arredondadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -152,8 +155,8 @@ body {
 
 .navbar-item .icon-name {
     display: block;
-    font-size: 0.8rem;
-    margin-top: 5px;
+    font-size: 0.6rem; /* Tamanho menor do texto abaixo dos ícones */
+    margin-top: 3px; /* Margem menor entre ícone e texto */
 }
 
 /* Ícone "F" sem círculo */
@@ -164,6 +167,6 @@ body {
 /* Ícone de coração com círculo */
 .icon-heart-circle {
     border: 2px solid white;
-    padding: 5px;
+    padding: 3px; /* Padding menor para ajustar ao ícone reduzido */
     border-radius: 50%;
 }
