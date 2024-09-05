@@ -13,7 +13,21 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-y: auto;
-    position: relative;
+}
+
+/* Novo container para a logo e opções no topo */
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Espaçamento superior para a logo */
+    width: 100%;
+}
+
+/* Estilo para a logo */
+.logo {
+    max-width: 100px; /* Ajuste o tamanho máximo da logo conforme necessário */
+    margin-bottom: 10px; /* Espaçamento entre a logo e as opções */
 }
 
 /* Opções no topo com retângulos menores alinhados horizontalmente */
@@ -21,25 +35,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3px; /* Reduzido para ajustar o espaço entre as opções */
+    gap: 5px; /* Espaçamento entre as opções */
     background-color: transparent; /* Fundo transparente */
-    padding: 5px 0; /* Reduzido para diminuir o espaço interno */
-    position: fixed;
-    top: 0;
-    width: 90%; /* Ajusta para alinhar com a largura dos blocos */
-    max-width: 390px; /* Alinha com a largura máxima dos blocos */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    padding: 5px 0; /* Espaço interno reduzido */
+    margin-bottom: 20px; /* Espaçamento abaixo das opções para os blocos */
 }
 
+/* Estilo dos retângulos das opções */
 .option-rectangle {
     background-color: transparent; /* Remover fundo preto */
     border: 2px solid #808080; /* Borda cinza */
     color: #808080; /* Letras cinzas */
-    padding: 2px 5px; /* Reduzido para diminuir o tamanho */
-    border-radius: 12px; /* Bordas mais arredondadas */
-    font-size: 0.5rem; /* Tamanho menor do texto */
+    padding: 5px 10px; /* Ajustar o padding */
+    border-radius: 12px; /* Bordas arredondadas */
+    font-size: 0.7rem; /* Tamanho menor do texto */
     text-align: center;
 }
 
@@ -56,40 +65,13 @@ body {
     color: white; /* Letras brancas ao passar o mouse */
 }
 
-/* Ícone de pesquisa no topo */
-.top-nav {
-    display: flex;
-    justify-content: center; /* Centralizar a lupa */
-    align-items: center;
-    background-color: transparent; /* Fundo transparente */
-    padding: 5px; /* Reduzido para diminuir o padding da lupa */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30px; /* Largura reduzida para a lupa */
-    height: 30px; /* Altura reduzida para a lupa */
-    z-index: 3; /* Acima das opções no topo */
-    border-radius: 50%; /* Bordas arredondadas */
-}
-
-.search-icon-top a {
-    color: white;
-    text-decoration: none;
-}
-
-.search-icon-top i {
-    font-size: 1rem; /* Tamanho reduzido da lupa */
-}
-
-/* Ajuste das outras seções para se adaptarem à barra lateral de opções */
+/* Espaçamento entre opções e blocos */
 .container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 50px; /* Ajusta o espaçamento para evitar sobreposição da barra superior */
+    padding: 0 20px; /* Espaço acima e laterais do conteúdo */
 }
 
 /* Blocos */
@@ -105,7 +87,6 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     font-size: 1.6rem;
     transition: all 0.3s ease;
-    position: relative;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -127,8 +108,8 @@ body {
     border-top: 1px solid #FF27B0;
     box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 90%;  /* Ajuste de largura para alinhar com os blocos */
-    max-width: 390px;  /* Mesma largura máxima dos blocos */
+    width: 90%; /* Ajuste de largura para alinhar com os blocos */
+    max-width: 390px; /* Mesma largura máxima dos blocos */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -173,4 +154,29 @@ body {
     border: 2px solid white;
     padding: 3px; /* Padding menor para ajustar ao ícone reduzido */
     border-radius: 50%;
+}
+
+/* Ícone de pesquisa no topo */
+.top-nav {
+    display: flex;
+    justify-content: center; /* Centralizar a lupa */
+    align-items: center;
+    background-color: transparent; /* Fundo transparente */
+    padding: 10px; /* Padding original */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px; /* Largura original */
+    height: 40px; /* Altura original */
+    z-index: 3; /* Acima das opções no topo */
+    border-radius: 50%; /* Bordas arredondadas */
+}
+
+.search-icon-top a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-icon-top i {
+    font-size: 1.2rem; /* Tamanho original da lupa */
 }
