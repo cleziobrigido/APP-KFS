@@ -101,7 +101,7 @@ body {
     width: 90%;
     max-width: 390px;
     border-radius: 30px;
-    border: 2px solid #FF53BC;
+    border: 2px solid #FF27B0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     font-size: 1.6rem;
     transition: all 0.3s ease;
@@ -119,12 +119,12 @@ body {
 
 /* Barra de navegação inferior */
 .navbar {
-    background-color: #FF53BC;
+    background-color: #FF27B0;
     padding: 1px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #FF53BC;
+    border-top: 1px solid #FF27B0;
     box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 90%;  /* Ajuste de largura para alinhar com os blocos */
