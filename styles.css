@@ -20,14 +20,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px; /* Espaçamento superior para a logo */
+    padding-top: 80px; /* Espaçamento superior para a logo */
     width: 100%;
 }
 
 /* Estilo para a logo */
 .logo {
-    max-width: 100px; /* Ajuste o tamanho máximo da logo conforme necessário */
-    margin-bottom: 10px; /* Espaçamento entre a logo e as opções */
+    max-width: 300px; /* Ajuste o tamanho máximo da logo conforme necessário */
+    margin-bottom: 1px; /* Espaçamento entre a logo e as opções */
 }
 
 /* Opções no topo com retângulos menores alinhados horizontalmente */
@@ -35,9 +35,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espaçamento entre as opções */
+    gap: 1px; /* Espaçamento entre as opções */
     background-color: transparent; /* Fundo transparente */
-    padding: 5px 0; /* Espaço interno reduzido */
+    padding: 1px 0; /* Espaço interno reduzido */
     margin-bottom: 20px; /* Espaçamento abaixo das opções para os blocos */
 }
 
@@ -46,7 +46,7 @@ body {
     background-color: transparent; /* Remover fundo preto */
     border: 2px solid #808080; /* Borda cinza */
     color: #808080; /* Letras cinzas */
-    padding: 5px 10px; /* Ajustar o padding */
+    padding: 0px 10px; /* Ajustar o padding */
     border-radius: 12px; /* Bordas arredondadas */
     font-size: 0.7rem; /* Tamanho menor do texto */
     text-align: center;
@@ -79,15 +79,15 @@ body {
     background: linear-gradient(145deg, #6e7d7f, #7f8c8d);
     color: white;
     text-align: center;
-    padding: 20px 10px;
-    width: 90%;
-    max-width: 390px;
-    border-radius: 30px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 50px;
     border: 2px solid #FF27B0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     font-size: 1.6rem;
     transition: all 0.3s ease;
-    height: 250px;
+    height: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,20 +101,21 @@ body {
 /* Barra de navegação inferior */
 .navbar {
     background-color: #FF27B0;
-    padding: 1px;
+    padding: 2px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #FF27B0;
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #FF27B0;
+    box-shadow: 0 -3px 40px rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 90%; /* Ajuste de largura para alinhar com os blocos */
-    max-width: 390px; /* Mesma largura máxima dos blocos */
+    width: 100%;
+    max-width: 560px; /* Mesma largura máxima dos blocos */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 2;
 }
+
 
 /* Outros ajustes */
 .navbar-item {
@@ -127,7 +128,7 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 1rem; /* Tamanho menor dos ícones */
+    font-size: 2rem; /* Tamanho menor dos ícones */
     padding: 5px; /* Reduzindo o padding */
     border-radius: 8px; /* Bordas mais arredondadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
