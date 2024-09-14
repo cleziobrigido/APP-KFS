@@ -27,7 +27,7 @@ body {
 /* Estilo para a logo */
 .logo {
     max-width: 300px; /* Ajuste o tamanho máximo da logo conforme necessário */
-    margin-bottom: 1px; /* Espaçamento entre a logo e as opções */
+    margin-bottom: 10px; /* Espaçamento entre a logo e as opções */
 }
 
 /* Container das opções no topo */
@@ -48,17 +48,28 @@ body {
 /* Estilo dos retângulos das opções */
 .option-rectangle {
     background-color: transparent; /* Remover fundo preto */
-    border: 2px solid #808080; /* Borda cinza */
+    border: 1px solid #808080; /* Borda cinza mais fina */
     color: #808080; /* Letras cinzas */
-    padding: 0px 10px; /* Ajustar o padding */
-    border-radius: 12px; /* Bordas arredondadas */
-    font-size: 0.7rem; /* Tamanho menor do texto */
+    width: 200px; /* Aumentar largura do retângulo */
+    height: 60px; /* Aumentar altura do retângulo */
+    display: flex;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    padding: 10px; /* Adicionar padding interno */
+    border-radius: 16px; /* Bordas mais arredondadas */
+    font-size: 1rem; /* Tamanho ajustado do texto */
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionando transição suave */
 }
 
 .option-rectangle a {
     color: #808080; /* Texto dentro dos links também cinza */
     text-decoration: none;
+    display: flex;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    width: 100%;
+    height: 100%;
 }
 
 .option-rectangle:hover, .option-rectangle:active {
