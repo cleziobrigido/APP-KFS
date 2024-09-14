@@ -30,15 +30,19 @@ body {
     margin-bottom: 1px; /* Espaçamento entre a logo e as opções */
 }
 
-/* Opções no topo com retângulos menores alinhados horizontalmente */
+/* Container das opções no topo */
 .top-options {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1px; /* Espaçamento entre as opções */
-    background-color: transparent; /* Fundo transparente */
-    padding: 1px 0; /* Espaço interno reduzido */
-    margin-bottom: 20px; /* Espaçamento abaixo das opções para os blocos */
+    flex-direction: column; /* Alinha as linhas verticalmente */
+    align-items: center; /* Centraliza as linhas */
+    gap: 10px; /* Espaçamento entre as linhas */
+    margin-bottom: 30px; /* Espaçamento abaixo das opções para os blocos */
+}
+
+/* Linha de opções em linha */
+.options-row {
+    display: flex;
+    gap: 10px; /* Espaçamento entre as opções em linha */
 }
 
 /* Estilo dos retângulos das opções */
@@ -70,7 +74,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px; /* Aumentado o espaçamento entre os blocos */
     padding: 0 20px; /* Espaço acima e laterais do conteúdo */
 }
 
