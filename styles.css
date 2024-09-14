@@ -91,8 +91,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Adiciona posicionamento relativo para o bloco */
 }
 
+/* Imagem dentro dos blocos */
+.imagem-bloco {
+    max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do bloco */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin-top: 10px; /* Espaçamento acima da imagem, ajuste conforme necessário */
+}
+
+/* Efeito ao passar o mouse sobre os blocos */
 .bloco:hover, .bloco:active {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
@@ -115,7 +125,6 @@ body {
     transform: translateX(-50%);
     z-index: 2;
 }
-
 
 /* Outros ajustes */
 .navbar-item {
