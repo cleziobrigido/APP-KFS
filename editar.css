@@ -69,10 +69,9 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    grid-template-rows: auto auto auto; /* 3 linhas */
     gap: 20px; /* Espaçamento entre os blocos */
     padding: 20px; /* Espaço ao redor dos blocos */
-    max-width: 1900px; /* Largura máxima do container */
+    max-width: 560px; /* Largura máxima do container igual à barra */
     margin: 0 auto; /* Centralizar horizontalmente */
     margin-bottom: 60px; /* Espaçamento adicional para a barra inferior */
 }
@@ -82,13 +81,14 @@ body {
     background: linear-gradient(145deg, #6e7d7f, #7f8c8d);
     color: white;
     text-align: center;
-    padding: 70px; /* Padding ajustado para maior tamanho */
+    height: 200px; /* Altura fixa para todos os blocos */
     border-radius: 20px; /* Bordas arredondadas */
     border: 2px solid #FF27B0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra reduzida */
     font-size: 1.2rem; /* Tamanho do texto ajustado */
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column; /* Para empilhar ícone e texto */
     justify-content: center;
     align-items: center;
 }
@@ -99,29 +99,10 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Ajuste para a posição dos blocos */
-.container > .bloco:nth-child(1) {
-    grid-column: span 1; /* Bloco 1 ocupa uma coluna */
-}
-
-.container > .bloco:nth-child(2) {
-    grid-column: span 1; /* Bloco 2 ocupa uma coluna */
-}
-
-.container > .bloco:nth-child(3) {
-    grid-column: span 1; /* Bloco 3 ocupa uma coluna */
-}
-
-.container > .bloco:nth-child(4) {
-    grid-column: span 1; /* Bloco 4 ocupa uma coluna */
-}
-
-.container > .bloco:nth-child(5) {
-    grid-column: span 1; /* Bloco 5 ocupa uma coluna */
-}
-
-.container > .bloco:nth-child(6) {
-    grid-column: span 1; /* Bloco 6 ocupa uma coluna */
+/* Ícones dos blocos */
+.bloco i {
+    font-size: 2rem; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
 }
 
 /* Barra de navegação inferior */
@@ -135,7 +116,7 @@ body {
     box-shadow: 0 -3px 40px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
-    max-width: 1900px; /* Mesma largura máxima dos blocos */
+    max-width: 560px; /* Mesma largura máxima dos blocos */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
