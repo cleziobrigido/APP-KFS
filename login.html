@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFS-BETA</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="login.css"> <!-- Link para o CSS de login -->
+</head>
+<body>
+    <div class="top-header">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h1>Login</h1>
+        <form class="login-form" id="loginForm" onsubmit="return validateForm()">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;"></p> <!-- Mensagem de erro -->
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Exemplo simples de verificação de senha
+            const validPassword = "senha123"; // Defina a senha correta aqui
+
+            if (password !== validPassword) {
+                errorMessage.textContent = "Senha incorreta. Tente novamente.";
+                errorMessage.style.display = "block";
+                return false; // Impede o envio do formulário
+            }
+
+            // Se a senha estiver correta, redireciona para index.html
+            errorMessage.style.display = "none";
+            window.location.href = "index.html"; // Redireciona para index.html
+            return false; // Impede o envio do formulário
+        }
+    </script>
+</body>
+</html>
