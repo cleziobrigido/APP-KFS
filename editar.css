@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações básicas do corpo */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Novo container para a logo e opções no topo */
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Espaçamento superior para a logo */
+    width: 100%;
+}
+
+/* Estilo para a logo */
+.logo {
+    max-width: 300px; /* Ajuste o tamanho máximo da logo conforme necessário */
+    margin-bottom: 1px; /* Espaçamento entre a logo e as opções */
+}
+
+/* Opções no topo com retângulos menores alinhados horizontalmente */
+.top-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px; /* Espaçamento entre as opções */
+    background-color: transparent; /* Fundo transparente */
+    padding: 1px 0; /* Espaço interno reduzido */
+    margin-bottom: 20px; /* Espaçamento abaixo das opções para os blocos */
+}
+
+/* Estilo dos retângulos das opções */
+.option-rectangle {
+    background-color: transparent; /* Remover fundo preto */
+    border: 2px solid #808080; /* Borda cinza */
+    color: #808080; /* Letras cinzas */
+    padding: 0px 10px; /* Ajustar o padding */
+    border-radius: 12px; /* Bordas arredondadas */
+    font-size: 0.7rem; /* Tamanho menor do texto */
+    text-align: center;
+}
+
+.option-rectangle a {
+    color: #808080; /* Texto dentro dos links também cinza */
+    text-decoration: none;
+}
+
+.option-rectangle:hover, .option-rectangle:active {
+    background-color: #DE570E; /* Cor laranja atualizada */
+}
+
+.option-rectangle:hover a, .option-rectangle:active a {
+    color: white; /* Letras brancas ao passar o mouse */
+}
+
+/* Espaçamento entre opções e blocos */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: auto auto auto; /* 3 linhas */
+    gap: 20px; /* Espaçamento entre os blocos */
+    padding: 20px; /* Espaço ao redor dos blocos */
+    max-width: 1900px; /* Largura máxima do container */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    margin-bottom: 60px; /* Espaçamento adicional para a barra inferior */
+}
+
+/* Blocos */
+.bloco {
+    background: linear-gradient(145deg, #6e7d7f, #7f8c8d);
+    color: white;
+    text-align: center;
+    padding: 70px; /* Padding ajustado para maior tamanho */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 2px solid #FF27B0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra reduzida */
+    font-size: 1.2rem; /* Tamanho do texto ajustado */
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Alteração ao passar o mouse */
+.bloco:hover, .bloco:active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste para a posição dos blocos */
+.container > .bloco:nth-child(1) {
+    grid-column: span 1; /* Bloco 1 ocupa uma coluna */
+}
+
+.container > .bloco:nth-child(2) {
+    grid-column: span 1; /* Bloco 2 ocupa uma coluna */
+}
+
+.container > .bloco:nth-child(3) {
+    grid-column: span 1; /* Bloco 3 ocupa uma coluna */
+}
+
+.container > .bloco:nth-child(4) {
+    grid-column: span 1; /* Bloco 4 ocupa uma coluna */
+}
+
+.container > .bloco:nth-child(5) {
+    grid-column: span 1; /* Bloco 5 ocupa uma coluna */
+}
+
+.container > .bloco:nth-child(6) {
+    grid-column: span 1; /* Bloco 6 ocupa uma coluna */
+}
+
+/* Barra de navegação inferior */
+.navbar {
+    background-color: #FF27B0;
+    padding: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid #FF27B0;
+    box-shadow: 0 -3px 40px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    max-width: 1900px; /* Mesma largura máxima dos blocos */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Outros ajustes */
+.navbar-item {
+    flex: 1;
+    text-align: center;
+    margin: 0 5px; /* Margem reduzida */
+}
+
+.navbar-item a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem; /* Tamanho menor dos ícones */
+    padding: 5px; /* Reduzindo o padding */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-item a:hover, .navbar-item a:active {
+    background-color: #e0489b;
+    transform: scale(1.1);
+}
+
+.navbar-item .icon-name {
+    display: block;
+    font-size: 0.6rem; /* Tamanho menor do texto abaixo dos ícones */
+    margin-top: 3px; /* Margem menor entre ícone e texto */
+}
+
+/* Ícone "F" sem círculo */
+.icon-f {
+    font-weight: bold;
+}
+
+/* Ícone de coração com círculo */
+.icon-heart-circle {
+    border: 2px solid white;
+    padding: 3px; /* Padding menor para ajustar ao ícone reduzido */
+    border-radius: 50%;
+}
+
+/* Ícone de pesquisa no topo */
+.top-nav {
+    display: flex;
+    justify-content: center; /* Centralizar a lupa */
+    align-items: center;
+    background-color: transparent; /* Fundo transparente */
+    padding: 10px; /* Padding original */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px; /* Largura original */
+    height: 30px; /* Altura original */
+    z-index: 3; /* Acima das opções no topo */
+    border-radius: 50%; /* Bordas arredondadas */
+}
+
+.search-icon-top a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-icon-top i {
+    font-size: 1.2rem; /* Tamanho original da lupa */
+}
