@@ -45,7 +45,13 @@
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0; /* Cor de fundo dos slides */
-            font-size: 18px; /* Tamanho do texto */
+        }
+
+        /* Estilo da imagem dentro do slide */
+        .swiper-slide img {
+            max-width: 100%; /* Para garantir que a imagem não ultrapasse o slide */
+            max-height: 100%; /* Para garantir que a imagem não ultrapasse o slide */
+            object-fit: contain; /* Para manter a proporção da imagem */
         }
 
         /* Estilo para a barra de navegação */
@@ -96,9 +102,9 @@
         <!-- Swiper -->
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
+                <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
+                <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
             </div>
             <!-- Adicionando botões de navegação se necessário -->
             <div class="swiper-button-next"></div>
