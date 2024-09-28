@@ -34,9 +34,13 @@
         }
 
         /* Estilo do slideshow */
-        .swiper {
+        .swiper-container {
             width: 100%;
             height: 300px; /* Ajuste a altura do slideshow conforme necessário */
+            border: 5px solid #ffcccc; /* Bordas do quadrado ao redor do slideshow */
+            border-radius: 15px; /* Arredondamento das bordas do quadrado */
+            padding: 10px; /* Espaçamento interno para o slideshow */
+            box-sizing: border-box; /* Para incluir padding e border no tamanho total */
         }
 
         /* Estilo do slide */
@@ -99,16 +103,13 @@
 
     <!-- Adicionando o retângulo vertical -->
     <div class="vertical-rectangle">
-        <!-- Swiper -->
-        <div class="swiper">
+        <!-- Adicionando um quadrado ao redor do slideshow -->
+        <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
                 <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
                 <div class="swiper-slide"><img src="logo.png" alt="Logo"></div>
             </div>
-            <!-- Adicionando botões de navegação se necessário -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
@@ -127,11 +128,15 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Inicializando o Swiper
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper-container', {
             loop: true, // Para fazer o loop
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            autoplay: {
+                delay: 3000, // Tempo entre as transições (em milissegundos)
+                disableOnInteraction: false, // Continua a reprodução automática mesmo após interação
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
         });
     </script>
