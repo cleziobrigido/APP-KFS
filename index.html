@@ -67,6 +67,54 @@
             z-index: 10;
         }
 
+        /* Estilo do ícone do menu hamburguer */
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Estilo para a barra lateral */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #c39b80;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 20;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffffff;
+            color: #c39b80;
+        }
+
+        /* Estilo para fechar a barra lateral */
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
         /* Estilo para a barra de navegação */
         .navbar {
             display: flex;
@@ -98,6 +146,13 @@
             font-size: 2rem;
             padding: 5px;
             border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Estilo ao passar o mouse sobre o botão */
+        .navbar-item a:hover {
+            background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+            color: #c39b80; /* Cor do ícone/texto ao passar o mouse */
         }
 
         .navbar-item .icon-name {
@@ -109,8 +164,20 @@
 </head>
 <body>
 
+    <!-- Barra lateral -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Opção 1</a>
+        <a href="#">Opção 2</a>
+        <a href="#">Opção 3</a>
+        <a href="#">Opção 4</a>
+    </div>
+
     <!-- Retângulo vertical -->
     <div class="vertical-rectangle">
+        <!-- Ícone de menu hamburguer -->
+        <i class="fas fa-bars menu-icon" onclick="openNav()"></i>
+
         <!-- Slideshow -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -149,6 +216,15 @@
                 clickable: true,
             },
         });
+
+        // Funções para abrir e fechar a barra lateral
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
     </script>
 </body>
 </html>
